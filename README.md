@@ -22,7 +22,8 @@ connecting to: 127.0.0.1/test
 1. Tampil Data
 
 //Get All Users
-    function getListMahasiswa() {
+    function getListMahasiswa() 
+    {
         $users = $this -> table -> find() -> limit($limit);
 
         return $users;
@@ -30,7 +31,8 @@ connecting to: 127.0.0.1/test
 
 2.Tambah Data
 
-  public function createMahasiswa() {
+  public function createMahasiswa() 
+  {
         $nim = $_POST['nim'];
         $nama = $_POST['nama'];
 
@@ -39,7 +41,8 @@ connecting to: 127.0.0.1/test
     }
 3.Edit Data
 
-    public function updateMahasiswa($nim) {
+    public function updateMahasiswa($nim) 
+    {
 
         $query = array('nim' => $nim);
 
@@ -55,6 +58,7 @@ connecting to: 127.0.0.1/test
     }
 4. delete  Data
 
-  function deleteMahasiswa($nim) {
+  function deleteMahasiswa($nim) 
+  {
         $this -> table -> remove(array('nim' => $nim));
     }
